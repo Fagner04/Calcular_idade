@@ -112,7 +112,7 @@ footer {
   }
 
   body {
-      background: linear-gradient(87deg, rgb(83 150 118 / 73%), rgb(99 198 128 / 72%));
+      background: linear-gradient(87deg, rgba(86, 80, 188, 0.397), rgba(176, 213, 82, 0.403));
   }
 
   }
