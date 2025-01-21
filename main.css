@@ -56,9 +56,6 @@
   }
 
 
-  .container {
-      /* margin: 0px 18%; */
-  }
 
   button {
       margin: 1px 28%;
@@ -92,6 +89,7 @@
   margin: 84px 10px 0px 10px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 footer {
