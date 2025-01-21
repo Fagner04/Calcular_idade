@@ -87,30 +87,23 @@
 
   header {
   background-color: rgb(122, 105, 166);
-  padding: 10px 20px;
+  padding: 10px 20px 44px;
   border-radius: 15px;
-  margin: 84px 10px 10px 10px;
+  margin: 84px 10px 0px 10px;
   display: flex;
   flex-direction: column;
 }
 
-
-
-
 /* Estilos específicos para a versão móvel (largura menor que 767px) */
 @media only screen and (max-width: 767px) {
   * {
-      margin: 10px;
+      margin: 0;
       padding: 0;
       box-sizing: border-box;
-      /* zoom: 128%;   */
-
   }
 
   body {
       background: linear-gradient(87deg, rgb(83 150 118 / 73%), rgb(99 198 128 / 72%));
   }
-  
-
 
   }
