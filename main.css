@@ -94,6 +94,17 @@
   flex-direction: column;
 }
 
+footer {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0px -30px ;
+    color: rgb(163, 165, 167);
+
+}
+
 /* Estilos específicos para a versão móvel (largura menor que 767px) */
 @media only screen and (max-width: 767px) {
   * {
