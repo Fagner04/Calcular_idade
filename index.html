@@ -1,206 +1,70 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-br">
 <head>
-    <title>JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idade</title>
 </head>
-<style>
-
-    /* customizable efeitoChuva styling */
-    .efeitoChuva {
-      color: #fff;
-      font-size: 1em;
-      font-family: Arial, sans-serif;
-      text-shadow: 0 0 5px #000;
-    }
-    
-    @-webkit-keyframes efeitoChuva-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes efeitoChuva-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes efeitoChuva-fall{0%{top:-10%}100%{top:100%}}@keyframes efeitoChuva-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.efeitoChuva{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:efeitoChuvas-fall,efeitoChuvas-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:efeitoChuva-fall,efeitoChuva-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.efeitoChuva:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.efeitoChuva:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.efeitoChuva:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.efeitoChuva:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.efeitoChuva:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.efeitoChuva:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.efeitoChuva:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.efeitoChuva:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.efeitoChuva:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.efeitoChuva:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.efeitoChuva:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.efeitoChuva:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
-    
- 
-    body {
-       
-        background: linear-gradient(272deg, rgba(228, 188, 233, 0.732), rgba(41, 108, 80, 0.719));
-     
-    }
-
-    .form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
-
-    input {
-        border: solid 0px rgba(136, 155, 62, 0.753);
-        border-radius: 10px 10px 0px;
-        padding: 5px;
-        margin: 0px 20px 10px;
-    }
-
-    label {
-        font-size: 14px;
-        font-family: sans-serif;
-        /* background-color: rgb(255, 255, 255); */
-        box-shadow: rgb(255, 255, 255) 0px 5px 0px 0px;
-        /* height: 18px;
-            width: 60px;  */
-        /* padding: 5px; */
-        border-radius: 10px 10px 0px;
-    }
-
-    #panding1 {
-        padding: 2px 11px 2px 7px;
-    }
-
-    #panding2 {
-        padding: 2px 11px 4px 7px;
-    }
-
-    #panding3 {
-        padding: 2px 11px 05px 7px;
-    }
-    #panding1 , #panding2, #panding3 {
-        color: antiquewhite;
-    }
-
-
-    .container {
-        /* margin: 0px 18%; */
-    }
-
-    button {
-        margin: 1px 28%;
-        border: 0 solid;
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: rgb(0, 0, 0) 2px 5px 0px;
-        background: linear-gradient(45deg, rgb(86, 143, 137), rgb(155, 154, 166));
-        transition: 400ms;
-        cursor: pointer;
-    }
-
-    button:hover {
-        transform: scale(1.04);
-        /* transition: 300ms; */
-    }
-
-    .resultado1, h3
-        {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    /* margin: 5px 274px -2px;
-    border-radius: 12px; */
-    }
-
-    header {
-    background-color: rgb(122, 105, 166);
-    padding: 10px 20px;
-    border-radius: 15px;
-    margin: 84px 10px 10px 10px;
-    display: flex;
-    flex-direction: column;
-}
-
- 
-  /* Estilos específicos para a versão desktop (largura a partir de 767px)
-  @media only screen and (min-width: 767px) {
-    .mobile-banner {
-      display: none;
-
-    }
-
-    }
-
-    .banner2 img{
-        height: 100px;
-        margin: 1px 500px;
-        border-radius: 20px;  
-    } */
-
-   
-
-  /* Estilos específicos para a versão móvel (largura menor que 767px) */
-  @media only screen and (max-width: 767px) {
-    * {
-        margin: 10px;
-        padding: 0;
-        box-sizing: border-box;
-        zoom: 128%;  
-
-    }
-
-    body {
-        background: linear-gradient(87deg, rgb(83 150 118 / 73%), rgb(99 198 128 / 72%));
-    }
-    
-
-
-    }
-
-
-</style>
-
 <body>
-    <div class="form">
-        <header>
-            <h2 style="font-size: 18spx;">CALCULAR IDADE</h2>
-            <section class="container">
-
-                <label id="panding1" for="text">Nome</label><br>
-                <input type="text" id="nome" required placeholder="Qual seu nome ?"><br>
-                <label id="panding2" for="text">Ano</label><br>
-                <input type="number" id="ano2025" placeholder="Qual o ano atual ?" required><br>
-                <label id="panding3" for="text">Nacido em </label><br>
-                <input type="number" id="anoNacimento" placeholder="Ano de nacimento ? "><br>
-                <button onclick="calcular()">CALCULAR</button>
-            </section>
-    </div>
-    <p class="resultado1">
-        <h3 style="color: rgb(2, 2, 2);" id="resultado"></h3>
-    </p>
-    </header>
-    <div>
-        <div class="efeitoChuvas" aria-hidden="true">
-            <div class="efeitoChuva">
-            ♡
-            </div>
-            <div class="efeitoChuva">
+    <body>
+        <div class="form">
+            <header>
+                <h2 style="font-size: 18spx;">CALCULAR IDADE</h2>
+                <section class="container">
+    
+                    <label id="panding1" for="text">Nome</label><br>
+                    <input type="text" id="nome" required placeholder="Qual seu nome ?"><br>
+                    <label id="panding2" for="text">Ano</label><br>
+                    <input type="number" id="ano2025" placeholder="Qual o ano atual ?" required><br>
+                    <label id="panding3" for="text">Nacido em </label><br>
+                    <input type="number" id="anoNacimento" placeholder="Ano de nacimento ? "><br>
+                    <button onclick="calcular()">CALCULAR</button>
+                </section>
+        </div>
+        <p class="resultado1">
+            <h3 style="color: rgb(2, 2, 2);" id="resultado"></h3>
+        </p>
+        </header>
+        <div>
+            <div class="efeitoChuvas" aria-hidden="true">
+                <div class="efeitoChuva">
+                ♡
+                </div>
+                <div class="efeitoChuva">
+                    ✿
+                </div>
+                <div class="efeitoChuva">
                 ✿
-            </div>
-            <div class="efeitoChuva">
-            ✿
-            </div>
-            <div class="efeitoChuva">
+                </div>
+                <div class="efeitoChuva">
+                    ❤
+                </div>
+                <div class="efeitoChuva">
+                    ❤
+                </div>
+                <div class="efeitoChuva">
                 ❤
-            </div>
-            <div class="efeitoChuva">
-                ❤
-            </div>
-            <div class="efeitoChuva">
-            ❤
-            </div>
-            <div class="efeitoChuva">
-            ✿
-            </div>
-            <div class="efeitoChuva">
-            ♥
-            </div>
-              <div class="efeitoChuva">
+                </div>
+                <div class="efeitoChuva">
                 ✿
-            </div>
-            <div class="efeitoChuva">
-                ✿
-            </div>
-            <div class="efeitoChuva">
-                ❤
-            </div>
-            <div class="efeitoChuva">
-                ✿
-            </div>
-    </div>
-    <footer id="fagner"></footer>
-    <script src="/main.js"></script>
+                </div>
+                <div class="efeitoChuva">
+                ♥
+                </div>
+                  <div class="efeitoChuva">
+                    ✿
+                </div>
+                <div class="efeitoChuva">
+                    ✿
+                </div>
+                <div class="efeitoChuva">
+                    ❤
+                </div>
+                <div class="efeitoChuva">
+                    ✿
+                </div>
+        </div>
+        <footer id="fagner"></footer>
+        <script src="/main.js"></script>
 </body>
-
 </html>
